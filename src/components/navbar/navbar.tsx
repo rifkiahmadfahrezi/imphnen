@@ -2,6 +2,7 @@ import { Button } from "@/components/ui/button";
 import { Logo } from "../icons";
 import { NavMenu } from "./nav-menu";
 import { NavigationSheet } from "./navigation-sheet";
+import { ThemeSwitcher } from "./theme-switcher";
 import { cn } from "@/lib/utils";
 
 export const Navbar = ({
@@ -21,6 +22,7 @@ export const Navbar = ({
             <Button asChild>
               <a href="#join">Bergabung</a>
             </Button>
+            <ThemeSwitcher />
 
             {/* Mobile Menu */}
             <div className="md:hidden">
