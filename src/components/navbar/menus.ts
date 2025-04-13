@@ -3,18 +3,18 @@ import type { NavMenu } from "./menu";
 export const navbarMenus: NavMenu[] = [
   {
     label: "Beranda",
-    url: "/",
+    url: "#",
   },
   {
     label: "Tentang kami",
-    url: "/tentang-kami",
+    url: "#tentang",
   },
   {
-    label: "Acara",
-    url: "/acara",
+    label: "Karya",
+    url: "#karya",
   },
   {
     label: "Merchandise",
-    url: "/merchandise",
+    url: "#merchandise",
   },
 ];

@@ -9,7 +9,7 @@ export const Baseayout = ({
    return (
       <>
       <Navbar />
-      <main className="min-h-svh">
+      <main className="min-h-svh border-x max-w-screen-xl mx-auto">
          {children}
       </main>
       <Footer />

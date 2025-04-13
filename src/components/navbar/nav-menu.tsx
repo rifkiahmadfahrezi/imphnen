@@ -8,7 +8,6 @@ import {
   NavigationMenuLink,
   NavigationMenuList,
   NavigationMenuTrigger,
-  navigationMenuTriggerStyle,
 } from "@/components/ui/navigation-menu";
 
 import { navbarMenus } from "./menus";
@@ -51,7 +50,7 @@ export function NavMenu({
               </>
             ) : (
               <Link href={menu.url || "#"} passHref>
-                <NavigationMenuLink className={navigationMenuTriggerStyle()}>
+                <NavigationMenuLink>
                   {menu.label}
                 </NavigationMenuLink>
               </Link>

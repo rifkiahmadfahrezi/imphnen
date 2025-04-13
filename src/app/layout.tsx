@@ -14,10 +14,20 @@ const geistSans = Geist({
 export const metadata: Metadata = {
   title: {
     template: `%s - ${siteConfig.title}`,
-    default: siteConfig.title
+    default: `${siteConfig.title} - ${siteConfig.description}`
   },
   description: siteConfig.description,
-  keywords: siteConfig.keyword
+  keywords: siteConfig.keyword,
+  openGraph: {
+    type: "website",
+    url: siteConfig.url,
+    title: siteConfig.title,
+    description: siteConfig.description,
+    siteName: siteConfig.title,
+    images: [
+      { url: siteConfig.openGraph }
+    ]
+  }
 };
 
 export default function RootLayout({

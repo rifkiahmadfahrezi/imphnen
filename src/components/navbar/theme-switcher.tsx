@@ -3,6 +3,7 @@
 import { useTheme } from "next-themes";
 import { Button } from "../ui/button";
 import { SunIcon, MoonIcon } from "lucide-react";
+import { cn } from "@/lib/utils";
 
 export const ThemeSwitcher = ({
    className,
@@ -12,6 +13,7 @@ export const ThemeSwitcher = ({
 
    return (
       <Button 
+         className={cn(className)}
          onClick={() => {
             setTheme(theme === "dark" ? "light" : "dark")
          }}

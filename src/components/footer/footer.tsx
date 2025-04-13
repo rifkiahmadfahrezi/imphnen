@@ -2,13 +2,14 @@
 import Link from 'next/link'
 import { links } from './links'
 import { siteConfig } from '@/config/site'
-import { Discord, Facebook, Instagram } from '../icons'
+import { Discord, Facebook, Instagram, GitHub } from '../icons'
 import { Logo } from '../icons'
 
 export const Footer = () => {
     return (
-        <footer className="py-16 md:py-32">
-            <div className="mx-auto max-w-5xl px-6">
+        <footer className="border-t">
+            <div className="h-16 bg-[repeating-linear-gradient(-45deg,var(--color-border),var(--color-border)_1px,transparent_1px,transparent_8px)] border-b"/>
+            <div className="mx-auto max-w-5xl px-6 py-10">
                 <Link href="/" aria-label="go home" className="mx-auto block size-fit">
                     <Logo width={200} height={100} />
                 </Link>
@@ -30,9 +31,13 @@ export const Footer = () => {
                     <a href={siteConfig.links.discord} target="_blank" rel="noopener noreferrer" aria-label={"discord"} className="text-muted-foreground hover:text-primary block">
                         <Discord className='size-6'/>
                     </a>
+                    <a href={siteConfig.links.github} target="_blank" rel="noopener noreferrer" aria-label={"github"} className="text-muted-foreground hover:text-primary block">
+                        <GitHub className='size-6'/>
+                    </a>
                 </div>
                 <span className="text-muted-foreground block text-center text-sm"> © {new Date().getFullYear()} {siteConfig.title}, All rights reserved</span>
             </div>
+            <div className="h-16 bg-[repeating-linear-gradient(45deg,var(--color-border),var(--color-border)_1px,transparent_1px,transparent_8px)] border-b"/>
         </footer>
     )
 }

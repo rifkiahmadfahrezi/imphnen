@@ -1,3 +1,5 @@
+"use client"
+
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { ChevronDown, Menu } from "lucide-react";
@@ -7,12 +9,17 @@ import {
   CollapsibleContent,
   CollapsibleTrigger,
 } from "@/components/ui/collapsible";
-
+import { useEffect, useState } from "react";
 import Link from "next/link";
 
 export const NavigationSheet = () => {
+  const [open, setOpen] = useState<boolean>(false)
+
+  useEffect(() => {
+    console.log(open)
+  }, [open])
   return (
-    <Sheet>
+    <Sheet defaultOpen={open} onOpenChange={setOpen}>
       <SheetTrigger asChild>
         <Button variant="outline" size="icon">
           <Menu />
@@ -26,9 +33,12 @@ export const NavigationSheet = () => {
                 <Button
                   asChild
                   className="w-full justify-start"
+                  
                   variant={"ghost"}
                 >
-                  <Link href={menu.url}>{menu.label}</Link>
+                  <Link 
+                    onClick={() => setOpen(false)} 
+                    href={menu.url}>{menu.label}</Link>
                 </Button>
               )}
               {menu.items && (
@@ -43,7 +53,7 @@ export const NavigationSheet = () => {
                     <ul className="flex flex-col bg-secondary rounded mt-1">
                       {menu.items.map((item) => (
                         <li key={item.title} className=" ml-5 py-2">
-                          <Button asChild variant={"ghost"}>
+                          <Button onClick={() => setOpen(false)} asChild variant={"ghost"}>
                             <Link href={item.url}>{item.title}</Link>
                           </Button>
                         </li>
