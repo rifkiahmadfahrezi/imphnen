@@ -37,7 +37,7 @@ const products = [
             </h2>
             <p className="max-w-2xl opacity-75 mx-auto">Merch ini lahir dari jiwa-jiwa penuh motivasi tapi minim implementasi. Pas banget buat kamu yang lebih sering nge-roasting teknologi daripada ngulik dokumentasi.</p>
          </BlurFade>
-         <div className="mt-10 grid sm:grid-cols-2 lg:grid-cols-4 gap-x-6 gap-y-12 max-w-md sm:max-w-screen-md lg:max-w-screen-lg w-full mx-auto px-6">
+         <div className="mt-10 grid place-items-center sm:grid-cols-2 lg:grid-cols-4 gap-x-6 gap-y-12 max-w-md sm:max-w-screen-md lg:max-w-screen-lg w-full mx-auto px-6">
            {products.map(({ title, price, image}) => (
              <BlurFade inView key={title} className="flex flex-col text-start">
                <figure className="mb-5 sm:mb-6 w-full aspect-square" >
