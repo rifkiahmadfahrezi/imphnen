@@ -11,7 +11,7 @@ export const AllProviders = ({
       <>
          <ThemeProvider
             attribute="class"
-            defaultTheme="system"
+            defaultTheme="dark"
             enableSystem
             disableTransitionOnChange
             >
