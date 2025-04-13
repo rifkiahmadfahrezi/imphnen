@@ -23,6 +23,7 @@ export const NavigationSheet = () => {
       <SheetTrigger asChild>
         <Button variant="outline" size="icon">
           <Menu />
+          <span className="sr-only">Toggle menu</span>
         </Button>
       </SheetTrigger>
       <SheetContent>
