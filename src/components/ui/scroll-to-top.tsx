@@ -23,14 +23,14 @@ export const ScrollToTop = () => {
       return () => {
          window.removeEventListener("scroll", handleVisible)
       }
-   }, [])
+   }, [handleVisible])
 
    return (
       <motion.div 
          animate={{
             translateY: isVisible ? "0" : "200%"
          }}
-         className={cn("fixed right-3 bottom-3", !isVisible && "sr-only")}>
+         className={cn("fixed right-3 bottom-3 z-30", !isVisible && "sr-only")}>
          <Button 
             onClick={() => {
                window.scrollTo({

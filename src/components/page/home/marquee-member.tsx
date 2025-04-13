@@ -2,6 +2,12 @@ import { cn } from "@/lib/utils";
 import { Marquee } from "@/components/animation/marquee";
 import { Card, CardTitle } from "@/components/ui/card";
 import Image from "next/image";
+import {
+  BottomLeftCorner,
+  BottomRightCorner,
+  TopLeftCorner,
+  TopRightCorner
+} from "@/components/ui/corners"
 
 const reviews = [
   {
@@ -36,10 +42,14 @@ export function MarqueeMember() {
             <figure key={channel} className={cn(
                   // i % 2 !== 0 ? "rotate-6" : "-rotate-6", 
                   "hover:rotate-0 transition duration-200",
-                  "hover:scale-125 hover:z-40 relative",
-                  "not-hover:opacity-75"
-               )}>
-              <Card className="flex flex-row items-center gap-2 px-4">
+                  "hover:scale-110 hover:z-40 relative",
+                  "not-hover:opacity-75 group relative"
+                )}>
+              <BottomLeftCorner className="border-foreground/75" />
+              <BottomRightCorner className="border-foreground/75" />
+              <TopLeftCorner className="border-foreground/75" />
+              <TopRightCorner className="border-foreground/75" />
+              <Card className="flex flex-row items-center gap-2 px-4 rounded scale-90 hover:scale-110">
                 <Image className="rounded-full" width="32" height="32" alt="" src={img} />
                 <div className="flex flex-col">
                   <figcaption className="text-sm font-medium dark:text-white">
