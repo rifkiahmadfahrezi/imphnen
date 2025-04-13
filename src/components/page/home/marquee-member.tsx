@@ -10,7 +10,7 @@ const reviews = [
     img: "https://avatar.vercel.sh/jack",
   },
   {
-    name: "Eko khannedy",
+    name: "Eko kurniawan khannedy",
     channel: "Programmer zaman now",
     img: "https://avatar.vercel.sh/jill",
   },
