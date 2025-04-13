@@ -10,10 +10,6 @@ export const navbarMenus: NavMenu[] = [
     url: "#tentang",
   },
   {
-    label: "Karya",
-    url: "#karya",
-  },
-  {
     label: "Merchandise",
     url: "#merchandise",
   },
